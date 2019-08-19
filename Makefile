@@ -6,5 +6,5 @@ install:
 	pipenv install --dev --skip-lock
 
 test:
-	python src/run_test.py test_document.py tests  
+	python run_test.py
 

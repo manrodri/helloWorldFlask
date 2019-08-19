@@ -6,8 +6,9 @@ import logging
 
 # test will run running make which lives one directory above src
 scriptdir = os.path.join(os.getcwd(), 'src')
-libdir = os.path.join(scriptdir, 'lib')
+libdir = os.path.join(scriptdir, 'app')
 sys.path.insert(0, libdir)
+sys .path.insert(0, scriptdir)
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
