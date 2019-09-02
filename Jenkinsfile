@@ -1,21 +1,6 @@
 pipeline {
-    agent {
-                docker {
-                    image 'circleci/python' 
-                    args '--user 0:0'
-                }
-            }
+    agent any
     stages {
-
-        stage('Preparation') { 
-            
-            steps {
-                    // git 'https://github.com/manrodri/stocks_price_tracking_app.git' 
-                    // insert your project repo url here
-                    sh 'pip3 install pipenv'
-            }
-        }
-
         stage('Build') { 
         
             steps {
@@ -35,6 +20,6 @@ pipeline {
             steps{
                 sh 'pipenv run make'
             }
-        }
     }
+}
 }

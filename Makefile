@@ -3,7 +3,7 @@
 default: test
 
 install:
-	pipenv install --dev --skip-lock
+	pip3 install -r requirements.txt
 
 test:
 	python run_test.py
